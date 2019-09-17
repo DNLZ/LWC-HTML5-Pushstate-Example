@@ -4,7 +4,7 @@ import page2 from './templates/page2.html';
 import page3 from './templates/page3.html';
 
 export default class App extends LightningElement {
-   @track pageNumber = 1;
+    @track pageNumber = 1;
 
     connectedCallback() {
         window.onpopstate = (ev) => {

@@ -1,5 +1,9 @@
 <template>
-    <p>Page 2</p>
-    <lightning-button onclick={back} label="back"></lightning-button>
-    <lightning-button onclick={next} label="next"></lightning-button>
+    <lightning-card title="Page 2">
+        <div class="slds-m-around_medium">
+            <lightning-input type="checkbox" label="Do you like cats?" class="slds-m-bottom_large"></lightning-input>
+            <lightning-button onclick={back} label="back"></lightning-button>
+            <lightning-button onclick={next} label="next"></lightning-button>
+        </div>
+    </lightning-card>
 </template>
