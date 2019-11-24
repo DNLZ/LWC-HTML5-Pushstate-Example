@@ -15,7 +15,7 @@
         <name>region3</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>LWC Pushstate Example</masterLabel>
+    <masterLabel>LWC History Example</masterLabel>
     <template>
         <name>flexipage:appHomeTemplateThreeColumns</name>
     </template>
