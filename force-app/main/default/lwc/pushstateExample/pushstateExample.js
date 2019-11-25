@@ -6,6 +6,9 @@ import page3 from './templates/page3.html';
 export default class App extends LightningElement {
     @track pageNumber = 1;
 
+    @track userName = '';
+    @track catName = '';
+
     goToNextPage() {
         this.pageNumber++;
         this._pushState();
@@ -27,26 +30,23 @@ export default class App extends LightningElement {
 
     connectedCallback() {
         this._setOnPopStateHandler();
-        this._setInitialState();
+        this._syncInitialState();
     }
 
     _setOnPopStateHandler() {
         window.onpopstate = (ev) => {
             const state = ev.state;
 
-            if(ev.state) {
+            if(state && state.pageNumber) {
                 this.pageNumber = state.pageNumber;
-            } else {
-                this.pageNumber = 1;
             }
         };
     }
 
-    _setInitialState() {
+    _syncInitialState() {
         if(history.state && history.state.pageNumber) {
             this.pageNumber = history.state.pageNumber;
         } else {
-            this.pageNumber = 1;
             this._replaceState();
         }
     }
@@ -61,5 +61,15 @@ export default class App extends LightningElement {
         const state = Object.assign({}, history.state);
         state.pageNumber = this.pageNumber;
         history.replaceState(state, '');
+    }
+
+    nameChangeHandler(event) {
+        this.userName = event.target.value;
+        this._replaceState();
+    }
+
+    catNameChangeHandler(event) {
+        this.catName = event.target.value;
+        this._replaceState();
     }
 }
