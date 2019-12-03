@@ -1,5 +1,5 @@
-# LWC HTML5 Pushstate Example
-This example demonstrates how to make the browser's **Forward** and **Back** buttons work inside a wizard built with LWC.
+# LWC History API Example
+This example demonstrates how to make the browser's **Forward** and **Back** buttons work with a wizard built with LWC.
 
 ## Installation via SFDX
 
