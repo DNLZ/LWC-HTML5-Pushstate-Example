@@ -1,5 +1,7 @@
 # LWC History API Example
-This example demonstrates how to make the browser's **Forward** and **Back** buttons work with a wizard built with LWC.
+This example demonstrates how to make the browser's **Forward** and **Back** buttons work with a wizard built with LWC (with no full page refresh).
+
+Blog Post: https://sfdc.danielzeidler.com/2019/12/19/integrating-the-browsers-back-and-forward-buttons-in-a-lightning-web-component/
 
 ## Installation via SFDX
 
